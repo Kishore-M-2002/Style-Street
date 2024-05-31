@@ -20,10 +20,10 @@ const Profile = () => {
     password: "",
   });
   const navigate = useNavigate();
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const getUserData = async () => {
     try {
-      const response = await axios(`https://style-street.onrender.com/user/${id}`);
+      const response = await axios(`${apiUrl}/user/${id}`);
       const data = response.data;
       setUserFormData({
         name: data.name,
@@ -51,11 +51,11 @@ const Profile = () => {
     e.preventDefault();
     try{
 
-      const getResponse = await axios(`https://style-street.onrender.com/user/${id}`);
+      const getResponse = await axios(`${apiUrl}/user/${id}`);
       const userObj = getResponse.data;
 
       // saljemo get(default) request
-      const putResponse = await axios.put(`https://style-street.onrender.com/user/${id}`, {
+      const putResponse = await axios.put(`${apiUrl}/user/${id}`, {
         id: id,
         name: userFormData.name,
         lastname: userFormData.lastname,

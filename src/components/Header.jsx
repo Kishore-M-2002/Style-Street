@@ -26,11 +26,11 @@ const Header = () => {
 
   const loginState = useSelector((state) => state.auth.isLoggedIn);
 
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const fetchWishlist = async () => {
     if(loginState){
       try {
-        const getResponse = await axios.get(`https://style-street.onrender.com/user/${localStorage.getItem("id")}`);
+        const getResponse = await axios.get(`${apiUrl}/user/${localStorage.getItem("id")}`);
         const userObj = getResponse.data;
   
         store.dispatch(updateWishlist({userObj}));

@@ -28,6 +28,8 @@ export const shopLoader = async ({ request }) => {
     mydate = "";
   }
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const filterObj = {
     brand: params.brand ?? "all",
     category: params.category ?? "all",
@@ -53,7 +55,7 @@ export const shopLoader = async ({ request }) => {
 
   try {
     const response = await axios(
-      `https://style-street.onrender.com/products${parameter}`
+      `${apiUrl}/products${parameter}`
 
     );
     let data = response.data;

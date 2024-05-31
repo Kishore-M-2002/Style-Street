@@ -23,9 +23,10 @@ import { toast } from "react-toastify";
 import { store } from "../store";
 
 export const singleProductLoader = async ({ params }) => {
+  const apiUrl = import.meta.env.VITE_API_URL;
   const { id } = params;
 
-  const response = await axios(`https://style-street.onrender.com/products/${id}`);
+  const response = await axios(`${apiUrl}/products/${id}`);
 
   return { productData: response.data };
 };
@@ -45,6 +46,7 @@ const SingleProduct = () => {
     "empty star",
     "empty star",
   ]);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const { productData } = useLoaderData();
 
@@ -69,7 +71,7 @@ const SingleProduct = () => {
   const addToWishlistHandler = async (product) => {
     try {
       const getResponse = await axios.get(
-        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`
+        `${apiUrl}/user/${localStorage.getItem("id")}`
       );
       const userObj = getResponse.data;
 
@@ -79,7 +81,7 @@ const SingleProduct = () => {
       userObj.userWishlist.push(product);
 
       const postResponse = await axios.put(
-        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`,
+        `${apiUrl}/user/${localStorage.getItem("id")}`,
         userObj
       );
 
@@ -93,7 +95,7 @@ const SingleProduct = () => {
 
   const removeFromWishlistHandler = async (product) => {
     const getResponse = await axios.get(
-      `https://style-street.onrender.com/user/${localStorage.getItem("id")}`
+      `${apiUrl}/user/${localStorage.getItem("id")}`
     );
     const userObj = getResponse.data;
 
@@ -106,7 +108,7 @@ const SingleProduct = () => {
     userObj.userWishlist = newWishlist;
 
     const postResponse = await axios.put(
-      `https://style-street.onrender.com/user/${localStorage.getItem("id")}`,
+      `${apiUrl}/user/${localStorage.getItem("id")}`,
       userObj
     );
 

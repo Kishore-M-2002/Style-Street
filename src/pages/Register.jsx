@@ -12,7 +12,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [adress, setAdress] = useState("");
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const isValidate = () => {
@@ -67,7 +67,7 @@ const Register = () => {
     };
 
     if (isValidate()) {
-      fetch("https://style-street.onrender.com/user", {
+      fetch(`${apiUrl}/user`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regObj),

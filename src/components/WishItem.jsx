@@ -9,10 +9,11 @@ import { toast } from "react-toastify";
 
 const WishItem = ({ item, counter }) => {
     const dispatch = useDispatch();
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     const removeFromWishlistHandler = async (product) => {
       const getResponse = await axios.get(
-        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`
+        `${apiUrl}/user/${localStorage.getItem("id")}`
       );
       const userObj = getResponse.data;
   
@@ -23,7 +24,7 @@ const WishItem = ({ item, counter }) => {
       userObj.userWishlist = newWishlist;
   
       const postResponse = await axios.put(
-        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`,
+        `${apiUrl}/user/${localStorage.getItem("id")}`,
         userObj
       );
   

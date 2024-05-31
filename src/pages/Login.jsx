@@ -32,11 +32,11 @@ const Login = () => {
     }
     return isProceed;
   };
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const proceedLogin = (e) => {
     e.preventDefault();
     if (isValidate()) {
-      fetch("https://style-street.onrender.com/user")
+      fetch(`${apiUrl}/user`)
         .then((res) => res.json())
         .then((res) => {
           let data = res;

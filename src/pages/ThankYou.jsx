@@ -13,10 +13,10 @@ const ThankYou = () => {
   const { total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const saveToOrderHistory = async () => {
     try {
-      const response = await axios.post("https://style-street.onrender.com/orders", {
+      const response = await axios.post(`${apiUrl}/orders`, {
         userId: localStorage.getItem("id"),
         orderStatus: "in progress",
         subtotal: total,
