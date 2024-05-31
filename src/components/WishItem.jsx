@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 const WishItem = ({ item, counter }) => {
     const dispatch = useDispatch();
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = "https://style-street.onrender.com";
 
     const removeFromWishlistHandler = async (product) => {
       const getResponse = await axios.get(

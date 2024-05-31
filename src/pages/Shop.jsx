@@ -28,7 +28,7 @@ export const shopLoader = async ({ request }) => {
     mydate = "";
   }
 
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://style-street.onrender.com";
 
   const filterObj = {
     brand: params.brand ?? "all",

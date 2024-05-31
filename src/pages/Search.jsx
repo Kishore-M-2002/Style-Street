@@ -7,7 +7,7 @@ const Search = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://style-street.onrender.com";
 
   const handleSearch = async (e) => {
     e.preventDefault();

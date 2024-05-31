@@ -32,7 +32,7 @@ const Login = () => {
     }
     return isProceed;
   };
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://style-street.onrender.com";
   const proceedLogin = (e) => {
     e.preventDefault();
     if (isValidate()) {

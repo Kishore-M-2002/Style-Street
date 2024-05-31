@@ -12,7 +12,8 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [adress, setAdress] = useState("");
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://style-street.onrender.com";
+  console.log(apiUrl,"apiUrl");
   const navigate = useNavigate();
 
   const isValidate = () => {
@@ -53,6 +54,7 @@ const Register = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log(apiUrl,"apiUrl");
     e.preventDefault();
 
     let regObj = {

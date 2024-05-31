@@ -11,7 +11,7 @@ const OrderHistory = () => {
   const loginState = useSelector((state) => state.auth.isLoggedIn);
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = "https://style-street.onrender.com";
   const getOrderHistory = async () => {
     try {
       // saljemo get(default) request
