@@ -69,7 +69,11 @@ const Register = () => {
     };
 
     if (isValidate()) {
+<<<<<<< HEAD
       fetch(`${apiUrl}/user`, {
+=======
+      fetch("http://localhost:8080/user", {
+>>>>>>> parent of 7eae1f9 (api changed)
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regObj),

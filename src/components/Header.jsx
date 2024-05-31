@@ -30,7 +30,11 @@ const Header = () => {
   const fetchWishlist = async () => {
     if(loginState){
       try {
+<<<<<<< HEAD
         const getResponse = await axios.get(`${apiUrl}/user/${localStorage.getItem("id")}`);
+=======
+        const getResponse = await axios.get(`http://localhost:8080/user/${localStorage.getItem("id")}`);
+>>>>>>> parent of 7eae1f9 (api changed)
         const userObj = getResponse.data;
   
         store.dispatch(updateWishlist({userObj}));

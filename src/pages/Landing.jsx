@@ -7,7 +7,11 @@ import axios from "axios";
 export const landingLoader = async () => {
   const apiUrl = "https://style-street.onrender.com";
   const response = await axios(
+<<<<<<< HEAD
     `${apiUrl}/products?_page=1&_limit=8`
+=======
+    `http://localhost:8080/products?_page=1&_limit=8`
+>>>>>>> parent of 7eae1f9 (api changed)
   );
   const data = response.data;
 

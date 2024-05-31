@@ -55,7 +55,11 @@ export const shopLoader = async ({ request }) => {
 
   try {
     const response = await axios(
+<<<<<<< HEAD
       `${apiUrl}/products${parameter}`
+=======
+      `http://localhost:8080/products${parameter}`
+>>>>>>> parent of 7eae1f9 (api changed)
 
     );
     let data = response.data;

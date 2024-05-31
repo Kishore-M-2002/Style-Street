@@ -16,7 +16,11 @@ const ThankYou = () => {
   const apiUrl = "https://style-street.onrender.com";
   const saveToOrderHistory = async () => {
     try {
+<<<<<<< HEAD
       const response = await axios.post(`${apiUrl}/orders`, {
+=======
+      const response = await axios.post("http://localhost:8080/orders", {
+>>>>>>> parent of 7eae1f9 (api changed)
         userId: localStorage.getItem("id"),
         orderStatus: "in progress",
         subtotal: total,

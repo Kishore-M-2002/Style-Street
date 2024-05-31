@@ -26,7 +26,11 @@ export const singleProductLoader = async ({ params }) => {
   const apiUrl = "https://style-street.onrender.com";
   const { id } = params;
 
+<<<<<<< HEAD
   const response = await axios(`${apiUrl}/products/${id}`);
+=======
+  const response = await axios(`http://localhost:8080/products/${id}`);
+>>>>>>> parent of 7eae1f9 (api changed)
 
   return { productData: response.data };
 };
@@ -71,7 +75,11 @@ const SingleProduct = () => {
   const addToWishlistHandler = async (product) => {
     try {
       const getResponse = await axios.get(
+<<<<<<< HEAD
         `${apiUrl}/user/${localStorage.getItem("id")}`
+=======
+        `http://localhost:8080/user/${localStorage.getItem("id")}`
+>>>>>>> parent of 7eae1f9 (api changed)
       );
       const userObj = getResponse.data;
 
@@ -81,7 +89,11 @@ const SingleProduct = () => {
       userObj.userWishlist.push(product);
 
       const postResponse = await axios.put(
+<<<<<<< HEAD
         `${apiUrl}/user/${localStorage.getItem("id")}`,
+=======
+        `http://localhost:8080/user/${localStorage.getItem("id")}`,
+>>>>>>> parent of 7eae1f9 (api changed)
         userObj
       );
 
@@ -95,7 +107,11 @@ const SingleProduct = () => {
 
   const removeFromWishlistHandler = async (product) => {
     const getResponse = await axios.get(
+<<<<<<< HEAD
       `${apiUrl}/user/${localStorage.getItem("id")}`
+=======
+      `http://localhost:8080/user/${localStorage.getItem("id")}`
+>>>>>>> parent of 7eae1f9 (api changed)
     );
     const userObj = getResponse.data;
 
@@ -108,7 +124,11 @@ const SingleProduct = () => {
     userObj.userWishlist = newWishlist;
 
     const postResponse = await axios.put(
+<<<<<<< HEAD
       `${apiUrl}/user/${localStorage.getItem("id")}`,
+=======
+      `http://localhost:8080/user/${localStorage.getItem("id")}`,
+>>>>>>> parent of 7eae1f9 (api changed)
       userObj
     );
 

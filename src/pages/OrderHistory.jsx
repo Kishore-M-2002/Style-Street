@@ -15,7 +15,11 @@ const OrderHistory = () => {
   const getOrderHistory = async () => {
     try {
       // saljemo get(default) request
+<<<<<<< HEAD
       const response = await axios.get(`${apiUrl}/orders`);
+=======
+      const response = await axios.get("http://localhost:8080/orders");
+>>>>>>> parent of 7eae1f9 (api changed)
       const data = response.data;
       setOrders(
         data.filter((order) => order.userId === localStorage.getItem("id"))

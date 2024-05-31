@@ -36,7 +36,11 @@ const Login = () => {
   const proceedLogin = (e) => {
     e.preventDefault();
     if (isValidate()) {
+<<<<<<< HEAD
       fetch(`${apiUrl}/user`)
+=======
+      fetch("http://localhost:8080/user")
+>>>>>>> parent of 7eae1f9 (api changed)
         .then((res) => res.json())
         .then((res) => {
           let data = res;

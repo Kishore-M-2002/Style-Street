@@ -23,7 +23,11 @@ const Profile = () => {
   const apiUrl = "https://style-street.onrender.com";
   const getUserData = async () => {
     try {
+<<<<<<< HEAD
       const response = await axios(`${apiUrl}/user/${id}`);
+=======
+      const response = await axios(`http://localhost:8080/user/${id}`);
+>>>>>>> parent of 7eae1f9 (api changed)
       const data = response.data;
       setUserFormData({
         name: data.name,
@@ -51,11 +55,19 @@ const Profile = () => {
     e.preventDefault();
     try{
 
+<<<<<<< HEAD
       const getResponse = await axios(`${apiUrl}/user/${id}`);
       const userObj = getResponse.data;
 
       // saljemo get(default) request
       const putResponse = await axios.put(`${apiUrl}/user/${id}`, {
+=======
+      const getResponse = await axios(`http://localhost:8080/user/${id}`);
+      const userObj = getResponse.data;
+
+      // saljemo get(default) request
+      const putResponse = await axios.put(`http://localhost:8080/user/${id}`, {
+>>>>>>> parent of 7eae1f9 (api changed)
         id: id,
         name: userFormData.name,
         lastname: userFormData.lastname,
