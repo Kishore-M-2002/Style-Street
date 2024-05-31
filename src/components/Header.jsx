@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="topbar border-b border-gray-800">
+      {/* <div className="topbar border-b border-gray-800">
         <ul>
           <li>
             <FaHeadphones className="text-2xl max-sm:text-lg text-accent-content" />
@@ -70,7 +70,7 @@ const Header = () => {
             </span>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div className="navbar bg-base-100 max-w-7xl mx-auto">
         <div className="flex-1">
           <Link
@@ -78,7 +78,7 @@ const Header = () => {
             className="btn btn-ghost normal-case text-2xl font-black text-accent-content"
           >
             <AiFillShopping />
-            Kuzma Clothing & Shoes
+            Style Street
           </Link>
         </div>
         <div className="flex-none">
@@ -101,12 +101,12 @@ const Header = () => {
               />
             </svg>
           </Link>
-          <button
+          {/* <button
             className="text-accent-content btn btn-ghost btn-circle text-xl"
             onClick={() => dispatch(changeMode())}
           >
             {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
+          </button> */}
           <Link
             to="/wishlist"
             className="btn btn-ghost btn-circle text-accent-content"
@@ -253,13 +253,22 @@ const Header = () => {
           <NavLink className="text-accent-content" to="/">
             Home
           </NavLink>
-          <NavLink className="text-accent-content" to="/shop">
+          {/* <NavLink className="text-accent-content" to="/shop">
+            Shop
+          </NavLink> */}
+          <NavLink className="text-accent-content" >
             Shop
           </NavLink>
-          <NavLink className="text-accent-content" to="/about-us">
+          {/* <NavLink className="text-accent-content" to="/about-us">
+            About us
+          </NavLink> */}
+          <NavLink className="text-accent-content" >
             About us
           </NavLink>
-          <NavLink className="text-accent-content" to="/contact">
+          {/* <NavLink className="text-accent-content" to="/contact">
+            Contact
+          </NavLink> */}
+          <NavLink className="text-accent-content" >
             Contact
           </NavLink>
           {!isLoggedIn && (
