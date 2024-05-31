@@ -14,15 +14,7 @@ const Search = () => {
     setSearchTerm(prevState => e.target.search.value);
     try {
       const response = await axios(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        `${apiUrl}/products?q=${e.target.search.value}&_page=${currentPage}`
-=======
         `http://localhost:8080/products?q=${e.target.search.value}&_page=${currentPage}`
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-        `https://style-street.onrender.com/products?q=${e.target.search.value}&_page=${currentPage}`
->>>>>>> parent of 2ab5285 (config updated)
       );
       const data = response.data;
       setProducts(data);
@@ -34,15 +26,7 @@ const Search = () => {
   const handleSearchPagination = async () => {
     try {
       const response = await axios(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        `${apiUrl}/products?q=${searchTerm}&_page=${currentPage}`
-=======
         `http://localhost:8080/products?q=${searchTerm}&_page=${currentPage}`
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-        `https://style-street.onrender.com/products?q=${searchTerm}&_page=${currentPage}`
->>>>>>> parent of 2ab5285 (config updated)
       );
       const data = response.data;
       setProducts(data);

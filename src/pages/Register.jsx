@@ -67,15 +67,7 @@ const Register = () => {
     };
 
     if (isValidate()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      fetch(`${apiUrl}/user`, {
-=======
       fetch("http://localhost:8080/user", {
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-      fetch("https://style-street.onrender.com/user", {
->>>>>>> parent of 2ab5285 (config updated)
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regObj),

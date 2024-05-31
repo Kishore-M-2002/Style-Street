@@ -25,15 +25,7 @@ import { store } from "../store";
 export const singleProductLoader = async ({ params }) => {
   const { id } = params;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const response = await axios(`${apiUrl}/products/${id}`);
-=======
   const response = await axios(`http://localhost:8080/products/${id}`);
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-  const response = await axios(`https://style-street.onrender.com/products/${id}`);
->>>>>>> parent of 2ab5285 (config updated)
 
   return { productData: response.data };
 };
@@ -77,15 +69,7 @@ const SingleProduct = () => {
   const addToWishlistHandler = async (product) => {
     try {
       const getResponse = await axios.get(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        `${apiUrl}/user/${localStorage.getItem("id")}`
-=======
         `http://localhost:8080/user/${localStorage.getItem("id")}`
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`
->>>>>>> parent of 2ab5285 (config updated)
       );
       const userObj = getResponse.data;
 
@@ -95,15 +79,7 @@ const SingleProduct = () => {
       userObj.userWishlist.push(product);
 
       const postResponse = await axios.put(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        `${apiUrl}/user/${localStorage.getItem("id")}`,
-=======
         `http://localhost:8080/user/${localStorage.getItem("id")}`,
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`,
->>>>>>> parent of 2ab5285 (config updated)
         userObj
       );
 
@@ -117,15 +93,7 @@ const SingleProduct = () => {
 
   const removeFromWishlistHandler = async (product) => {
     const getResponse = await axios.get(
-<<<<<<< HEAD
-<<<<<<< HEAD
-      `${apiUrl}/user/${localStorage.getItem("id")}`
-=======
       `http://localhost:8080/user/${localStorage.getItem("id")}`
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-      `https://style-street.onrender.com/user/${localStorage.getItem("id")}`
->>>>>>> parent of 2ab5285 (config updated)
     );
     const userObj = getResponse.data;
 
@@ -138,15 +106,7 @@ const SingleProduct = () => {
     userObj.userWishlist = newWishlist;
 
     const postResponse = await axios.put(
-<<<<<<< HEAD
-<<<<<<< HEAD
-      `${apiUrl}/user/${localStorage.getItem("id")}`,
-=======
       `http://localhost:8080/user/${localStorage.getItem("id")}`,
->>>>>>> parent of 7eae1f9 (api changed)
-=======
-      `https://style-street.onrender.com/user/${localStorage.getItem("id")}`,
->>>>>>> parent of 2ab5285 (config updated)
       userObj
     );
 
