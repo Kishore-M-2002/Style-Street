@@ -26,15 +26,19 @@ const Header = () => {
 
   const loginState = useSelector((state) => state.auth.isLoggedIn);
 
-  const apiUrl = import.meta.env.VITE_API_URL;
+
   const fetchWishlist = async () => {
     if(loginState){
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
         const getResponse = await axios.get(`${apiUrl}/user/${localStorage.getItem("id")}`);
 =======
         const getResponse = await axios.get(`http://localhost:8080/user/${localStorage.getItem("id")}`);
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+        const getResponse = await axios.get(`https://style-street.onrender.com/user/${localStorage.getItem("id")}`);
+>>>>>>> parent of 2ab5285 (config updated)
         const userObj = getResponse.data;
   
         store.dispatch(updateWishlist({userObj}));

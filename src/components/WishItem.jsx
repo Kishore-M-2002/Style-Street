@@ -9,15 +9,18 @@ import { toast } from "react-toastify";
 
 const WishItem = ({ item, counter }) => {
     const dispatch = useDispatch();
-    const apiUrl = import.meta.env.VITE_API_URL;
 
     const removeFromWishlistHandler = async (product) => {
       const getResponse = await axios.get(
+<<<<<<< HEAD
 <<<<<<< HEAD
         `${apiUrl}/user/${localStorage.getItem("id")}`
 =======
         `http://localhost:8080/user/${localStorage.getItem("id")}`
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`
+>>>>>>> parent of 2ab5285 (config updated)
       );
       const userObj = getResponse.data;
   
@@ -29,10 +32,14 @@ const WishItem = ({ item, counter }) => {
   
       const postResponse = await axios.put(
 <<<<<<< HEAD
+<<<<<<< HEAD
         `${apiUrl}/user/${localStorage.getItem("id")}`,
 =======
         `http://localhost:8080/user/${localStorage.getItem("id")}`,
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+        `https://style-street.onrender.com/user/${localStorage.getItem("id")}`,
+>>>>>>> parent of 2ab5285 (config updated)
         userObj
       );
   

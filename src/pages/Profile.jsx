@@ -20,14 +20,18 @@ const Profile = () => {
     password: "",
   });
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL;
+
   const getUserData = async () => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       const response = await axios(`${apiUrl}/user/${id}`);
 =======
       const response = await axios(`http://localhost:8080/user/${id}`);
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+      const response = await axios(`https://style-street.onrender.com/user/${id}`);
+>>>>>>> parent of 2ab5285 (config updated)
       const data = response.data;
       setUserFormData({
         name: data.name,
@@ -56,6 +60,7 @@ const Profile = () => {
     try{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       const getResponse = await axios(`${apiUrl}/user/${id}`);
       const userObj = getResponse.data;
 
@@ -68,6 +73,13 @@ const Profile = () => {
       // saljemo get(default) request
       const putResponse = await axios.put(`http://localhost:8080/user/${id}`, {
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+      const getResponse = await axios(`https://style-street.onrender.com/user/${id}`);
+      const userObj = getResponse.data;
+
+      // saljemo get(default) request
+      const putResponse = await axios.put(`https://style-street.onrender.com/user/${id}`, {
+>>>>>>> parent of 2ab5285 (config updated)
         id: id,
         name: userFormData.name,
         lastname: userFormData.lastname,

@@ -12,7 +12,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [adress, setAdress] = useState("");
-  const apiUrl = import.meta.env.VITE_API_URL;
+
   const navigate = useNavigate();
 
   const isValidate = () => {
@@ -68,10 +68,14 @@ const Register = () => {
 
     if (isValidate()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       fetch(`${apiUrl}/user`, {
 =======
       fetch("http://localhost:8080/user", {
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+      fetch("https://style-street.onrender.com/user", {
+>>>>>>> parent of 2ab5285 (config updated)
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regObj),

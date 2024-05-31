@@ -11,15 +11,19 @@ const OrderHistory = () => {
   const loginState = useSelector((state) => state.auth.isLoggedIn);
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
-  const apiUrl = import.meta.env.VITE_API_URL;
+
   const getOrderHistory = async () => {
     try {
       // saljemo get(default) request
+<<<<<<< HEAD
 <<<<<<< HEAD
       const response = await axios.get(`${apiUrl}/orders`);
 =======
       const response = await axios.get("http://localhost:8080/orders");
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+      const response = await axios.get("https://style-street.onrender.com/orders");
+>>>>>>> parent of 2ab5285 (config updated)
       const data = response.data;
       setOrders(
         data.filter((order) => order.userId === localStorage.getItem("id"))

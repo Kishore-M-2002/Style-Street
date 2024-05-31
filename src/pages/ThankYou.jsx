@@ -13,14 +13,18 @@ const ThankYou = () => {
   const { total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL;
+
   const saveToOrderHistory = async () => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       const response = await axios.post(`${apiUrl}/orders`, {
 =======
       const response = await axios.post("http://localhost:8080/orders", {
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+      const response = await axios.post("https://style-street.onrender.com/orders", {
+>>>>>>> parent of 2ab5285 (config updated)
         userId: localStorage.getItem("id"),
         orderStatus: "in progress",
         subtotal: total,

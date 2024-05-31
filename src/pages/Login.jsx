@@ -32,15 +32,19 @@ const Login = () => {
     }
     return isProceed;
   };
-  const apiUrl = import.meta.env.VITE_API_URL;
+
   const proceedLogin = (e) => {
     e.preventDefault();
     if (isValidate()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       fetch(`${apiUrl}/user`)
 =======
       fetch("http://localhost:8080/user")
 >>>>>>> parent of 7eae1f9 (api changed)
+=======
+      fetch("https://style-street.onrender.com/user")
+>>>>>>> parent of 2ab5285 (config updated)
         .then((res) => res.json())
         .then((res) => {
           let data = res;
