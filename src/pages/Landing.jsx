@@ -5,7 +5,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const landingLoader = async () => {
-  const apiUrl = "https://style-street.onrender.com";
+  const apiUrl = import.meta.env.VITE_API_URL;
   const response = await axios(
 <<<<<<< HEAD
     `${apiUrl}/products?_page=1&_limit=8`

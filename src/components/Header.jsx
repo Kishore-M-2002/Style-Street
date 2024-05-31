@@ -26,7 +26,7 @@ const Header = () => {
 
   const loginState = useSelector((state) => state.auth.isLoggedIn);
 
-  const apiUrl = "https://style-street.onrender.com";
+  const apiUrl = import.meta.env.VITE_API_URL;
   const fetchWishlist = async () => {
     if(loginState){
       try {

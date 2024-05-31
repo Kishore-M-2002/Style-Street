@@ -23,7 +23,7 @@ import { toast } from "react-toastify";
 import { store } from "../store";
 
 export const singleProductLoader = async ({ params }) => {
-  const apiUrl = "https://style-street.onrender.com";
+  const apiUrl = import.meta.env.VITE_API_URL;
   const { id } = params;
 
 <<<<<<< HEAD
@@ -50,7 +50,7 @@ const SingleProduct = () => {
     "empty star",
     "empty star",
   ]);
-  const apiUrl = "https://style-street.onrender.com";
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const { productData } = useLoaderData();
 

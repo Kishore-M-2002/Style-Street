@@ -20,7 +20,7 @@ const Profile = () => {
     password: "",
   });
   const navigate = useNavigate();
-  const apiUrl = "https://style-street.onrender.com";
+  const apiUrl = import.meta.env.VITE_API_URL;
   const getUserData = async () => {
     try {
 <<<<<<< HEAD

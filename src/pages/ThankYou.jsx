@@ -13,7 +13,7 @@ const ThankYou = () => {
   const { total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const apiUrl = "https://style-street.onrender.com";
+  const apiUrl = import.meta.env.VITE_API_URL;
   const saveToOrderHistory = async () => {
     try {
 <<<<<<< HEAD
