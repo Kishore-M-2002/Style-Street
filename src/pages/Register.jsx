@@ -67,7 +67,7 @@ const Register = () => {
     };
 
     if (isValidate()) {
-      fetch("http://localhost:8080/user", {
+      fetch("https://backend-street.onrender.com/user", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regObj),
