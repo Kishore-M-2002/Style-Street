@@ -10,7 +10,7 @@ const Footer = () => {
   const loginState = useSelector((state) => state.auth.isLoggedIn);
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10 max-md:px-0">
-      <nav className="grid grid-flow-col max-sm:grid-flow-row gap-4">
+      {/* <nav className="grid grid-flow-col max-sm:grid-flow-row gap-4">
         <Link to="/" className="link link-hover text-2xl max-md:text-xl text-accent-content" onClick={() => window.scrollTo(0, 0)}>
           Home
         </Link>
@@ -41,7 +41,7 @@ const Footer = () => {
             </Link>
           </>
         )}
-      </nav>
+      </nav> */}
       <nav>
         <div className="grid grid-flow-col gap-4">
           <FaSquareXTwitter className="text-6xl max-sm:text-4xl text-accent-content" />
@@ -52,7 +52,7 @@ const Footer = () => {
       </nav>
       <aside>
         <p className="text-2xl max-sm:text-sm text-accent-content">
-          Copyright © 2023 - All right reserved by Style Street
+          Copyright © 2024 - All right reserved by Style Street
         </p>
       </aside>
     </footer>

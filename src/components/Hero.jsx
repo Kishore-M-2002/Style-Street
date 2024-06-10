@@ -11,8 +11,8 @@ const Hero = () => {
           excepturi exercitationem quasi. In deleniti eaque aut repudiandae
           et a id nisi.
         </p>
-        {/* <Link to="/shop" className="btn btn-wide bg-blue-600 hover:bg-blue-500 text-white">Shop Now</Link> */}
-        <Link  className="btn btn-wide bg-blue-600 hover:bg-blue-500 text-white">Shop Now</Link>
+        <Link to="/shop" className="btn btn-wide bg-blue-600 hover:bg-blue-500 text-white">Shop Now</Link>
+        {/* <Link  className="btn btn-wide bg-blue-600 hover:bg-blue-500 text-white">Shop Now</Link> */}
 
       </div>
     </div>

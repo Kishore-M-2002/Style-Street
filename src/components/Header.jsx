@@ -253,24 +253,24 @@ const Header = () => {
           <NavLink className="text-accent-content" to="/">
             Home
           </NavLink>
-          {/* <NavLink className="text-accent-content" to="/shop">
-            Shop
-          </NavLink> */}
-          <NavLink className="text-accent-content" >
+          <NavLink className="text-accent-content" to="/shop">
             Shop
           </NavLink>
-          {/* <NavLink className="text-accent-content" to="/about-us">
-            About us
+          {/* <NavLink className="text-accent-content" >
+            Shop
           </NavLink> */}
-          <NavLink className="text-accent-content" >
+          <NavLink className="text-accent-content" to="/about-us">
             About us
           </NavLink>
-          {/* <NavLink className="text-accent-content" to="/contact">
-            Contact
+          {/* <NavLink className="text-accent-content" >
+            About us
           </NavLink> */}
-          <NavLink className="text-accent-content" >
+          <NavLink className="text-accent-content" to="/contact">
             Contact
           </NavLink>
+          {/* <NavLink className="text-accent-content" >
+            Contact
+          </NavLink> */}
           {!isLoggedIn && (
             <>
               <NavLink className="text-accent-content" to="/login">
